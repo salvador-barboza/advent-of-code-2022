@@ -1,0 +1,8 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vscode/main/extensions/configuration-editing/schemas/devContainer.schema.generated.json",
+	"name": "Blankie",
+	"hostRequirements": { // Require specs of at least premiumLinux machine type
+		"storage": "64gb",
+		"memory": "16gb"
+	}
+}
