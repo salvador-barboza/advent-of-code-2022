@@ -1,0 +1,17 @@
+name: Test action
+
+on:
+  issues:
+    types: [labeled, unlabeled]
+  
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+  
+    - uses: Amadevus/pwsh-script@fbb60107f8d707858c4ab46336d3963b7991782e
+      name: Run script
+      with:
+        script: |
+          Write-ActionInfo ($github.event | ConvertTo-Json -depth 100)
