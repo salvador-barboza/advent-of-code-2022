@@ -3,6 +3,7 @@ name: Test action
 on:
   issues:
     types: [labeled, unlabeled]
+  workflow_dispatch:
   
 jobs:
   sync:
