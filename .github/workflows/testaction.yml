@@ -1,8 +1,8 @@
 name: Test action
 
 on:
-  issues:
-    types: [labeled, unlabeled]
+  pull_request:
+    types: [closed]
   workflow_dispatch:
   
 jobs:
@@ -16,3 +16,4 @@ jobs:
       with:
         script: |
           Write-ActionInfo ($github.event | ConvertTo-Json -depth 100)
+          Write-ActionInfo ($github.event.pull_request.merged | ConvertTo-Json -depth 100)
